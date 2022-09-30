@@ -3,6 +3,11 @@ package com.example.demo;
 /**
  *  made by Andrey Grishin
  */
+
+/* Написать метод, который возвращает максимальный префикс
+   Пример: String[] {котлета, кошка, ковёр}
+   Вывод: ко
+* */
 public class LongestPrefix {
     public static void main(String[] args) {
         System.out.println(longestCommonPrefix(new String[]{"flower", "flow", "flight"}));

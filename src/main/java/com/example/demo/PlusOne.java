@@ -5,6 +5,13 @@ import java.util.Arrays;
 /**
  *  made by Andrey Grishin
  */
+
+/* Прибавить к массиву единицу чтобы получилось новое число
+   Пример: int[] {1, 2, 3}
+   Вывод: {1, 2, 4}
+   Пример2: {9, 9}
+   Вывод2: {1, 0, 0}
+* */
 public class PlusOne {
     public static void main(String[] args) {
         System.out.println(Arrays.toString(plusOne(new int[]{9, 2, 9})));
