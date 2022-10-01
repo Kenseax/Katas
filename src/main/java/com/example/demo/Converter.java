@@ -4,7 +4,7 @@ package com.example.demo;
  *  made by Andrey Grishin
  */
 
-/*  Реализовать транслитерацию из лфтиницы в кирилицу и обратно
+/*  Реализовать транслитерацию из латиницы в кирилицу и обратно
     Пример: ghbdtn -> привет / ьн тфьу шы вшьф -> my name is dima
 * */
 public class Converter {
