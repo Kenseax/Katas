@@ -61,7 +61,6 @@ public class Sudoku {
 
     public static boolean check(int[][] sudoku) {
 
-
         for (int[] ints : sudoku) {
             Set<Integer> x = new HashSet<>();
             int ff = 0;
