@@ -9,33 +9,39 @@ import java.util.List;
    Вывод: Привет, долбо***
 * */
 public class FilterBadWords {
-    static String phrase = "привет, долбоёб";
-    static List<String> badWords = new ArrayList<>();
-
-    static {
-        badWords.add("ёб");
-        badWords.add("хуй");
-        badWords.add("пизд");
-        badWords.add("бля");
-    }
+    public static String text = "Чувства в кулак, волю в узду!\n" +
+            "Рабочий, работай!\n" +
+            "Не охай!\n" +
+            "Не ахай!\n" +
+            "Выполнил план — посылай всех в пизду!\n" +
+            "А не выполнил —\n" +
+            "Сам иди нахуй!\n" +
+            "Сам иди нахуй!\n" +
+            "На хую я вас вертел!!!";
+    public static List<String> zamena = new ArrayList<>();
 
     public static void main(String[] args) {
-        System.out.println(replaysBadWords(badWords, phrase));
-        System.out.println(replaysBadWords(badWords, "Я сегодня видел Пизду и хуй"));
-        System.out.println(replaysBadWords(badWords, "у папы новая бляха"));
+
+        zamena.add("хуй");
+        zamena.add("хую");
+        zamena.add("пизд");
+        zamena.add("жопа");
+
+        System.out.println(check(text));
     }
 
-    public static String replaysBadWords(List<String> cache, String phrase) {
-        StringBuilder resultString = new StringBuilder(phrase.toLowerCase());
-        for (String word : cache) {
-            int indexOfWord = resultString.indexOf(word);
-            if (phrase.toLowerCase().contains(word)) {
-                resultString.replace(indexOfWord,
-                        indexOfWord + word.length(),
-                        "***");
+    public static String check(String str) {
+        StringBuilder sb = new StringBuilder();
+        sb.append(str);
+        int indexOfMat = 0;
+        for (String mat : zamena) {
+            indexOfMat = sb.indexOf(mat);
+            while (indexOfMat >= 0) {
+                sb.replace(indexOfMat, indexOfMat + mat.length(), "***");
+                indexOfMat = sb.indexOf(mat);
             }
         }
-        return resultString.toString();
+        return sb.toString();
     }
 
 }
