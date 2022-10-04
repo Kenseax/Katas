@@ -2,6 +2,10 @@ package com.example.demo;
 
 import java.util.stream.Stream;
 
+/*
+    Вывод числа Фибаначи
+ */
+
 public class Fibanachi {
 
     static long result = 0;
