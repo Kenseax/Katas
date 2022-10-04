@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.javacode;
 
 public class StringIntern {
     public static void main(String[] args) {

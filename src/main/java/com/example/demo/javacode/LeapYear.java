@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.javacode;
 
 public class LeapYear {
     // делится на 4 не делится на 100

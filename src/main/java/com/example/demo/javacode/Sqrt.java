@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.javacode;
 
 /* Написать метод для извлечения корня
    Пример: 121 -> 11

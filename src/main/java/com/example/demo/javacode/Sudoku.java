@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.javacode;
 
 // by d__kadyrbaev
 
