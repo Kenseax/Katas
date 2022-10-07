@@ -44,7 +44,7 @@ public class CountRepeat {
         Map<Integer, Integer> numbers = new HashMap<>();
 
         for (int j : arr) {
-            numbers.merge(j, 1, Integer::sum);
+            numbers.merge(j, 1, Integer::sum); //хорошее применение метода)
         }
         for (Integer key : numbers.keySet()) {
             if (numbers.get(key) > 1) {
