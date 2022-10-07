@@ -19,6 +19,7 @@ import java.util.Map;
 public class CountRepeat {
     public static void main(String[] args) {
         printNumber(new int[]{5, 3, 1, 2, 1, 2, 3, 3});
+        printNumberV2(new int[]{5, 3, 1, 2, 1, 2, 3, 3});
     }
 
     public static void printNumber(int[] arr) {
@@ -31,10 +32,23 @@ public class CountRepeat {
             }
             numbers.put(j, count);
         }
-
         for(Map.Entry<Integer, Integer> entry : numbers.entrySet()) {
             if (entry.getValue() > 1) {
                 System.out.println(entry.getKey() + "->" + entry.getValue());
+            }
+        }
+    }
+
+    // by d__kadyrbaev
+    public static void printNumberV2(int[] arr) {
+        Map<Integer, Integer> numbers = new HashMap<>();
+
+        for (int j : arr) {
+            numbers.merge(j, 1, Integer::sum);
+        }
+        for (Integer key : numbers.keySet()) {
+            if (numbers.get(key) > 1) {
+                System.out.println(key + " -> " + numbers.get(key));
             }
         }
     }
