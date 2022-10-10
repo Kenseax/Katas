@@ -1,6 +1,7 @@
 package com.example.demo.javacode;
 
 import java.util.Arrays;
+import java.util.stream.IntStream;
 
 /* Написать метод для возведения каждого числа в степень
    Дан отсортированный массив. Возвращаемое значение так же отсортированный массив
@@ -9,6 +10,8 @@ import java.util.Arrays;
 *  */
 
 public class SortedSquares {
+
+    static int[] nums = {-4, -2, 1, 3};
 
     public static void main(String[] args) {
     }
@@ -20,5 +23,10 @@ public class SortedSquares {
         }
         Arrays.sort(array);
         return array;
+    }
+
+
+    public static int[] sortedSquaresV2(int[] nums) {
+        return IntStream.of(nums).map(x -> x * x).sorted().toArray();
     }
 }
