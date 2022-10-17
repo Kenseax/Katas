@@ -10,16 +10,21 @@ package com.example.demo.javacode;
 //        5->не выводим
 
 
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 /**
- *  made by Andrey Grishin
+ * made by Andrey Grishin
  */
 public class CountRepeat {
     public static void main(String[] args) {
         printNumber(new int[]{5, 3, 1, 2, 1, 2, 3, 3});
         printNumberV2(new int[]{5, 3, 1, 2, 1, 2, 3, 3});
+        pintNumberV3stream(new int[]{5, 3, 1, 2, 1, 2, 3, 3});
     }
 
     public static void printNumber(int[] arr) {
@@ -32,7 +37,7 @@ public class CountRepeat {
             }
             numbers.put(j, count);
         }
-        for(Map.Entry<Integer, Integer> entry : numbers.entrySet()) {
+        for (Map.Entry<Integer, Integer> entry : numbers.entrySet()) {
             if (entry.getValue() > 1) {
                 System.out.println(entry.getKey() + "->" + entry.getValue());
             }
@@ -52,4 +57,16 @@ public class CountRepeat {
             }
         }
     }
+
+    public static void pintNumberV3stream(int[] arr) {
+        Arrays.stream(arr).boxed().collect(Collectors.toMap(i -> i, i -> 1, Integer::sum))
+
+                .entrySet().stream()
+                .filter(i -> i.getValue() > 1)
+                .sorted(Map.Entry.comparingByKey())
+                .forEach(System.out::println);
+
+
+    }
+
 }
