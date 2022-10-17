@@ -59,10 +59,10 @@ public class CountRepeat {
     }
 
     public static void pintNumberV3stream(int[] arr) {
-        Arrays.stream(arr).boxed().collect(Collectors.toMap(i -> i, i -> 1, Integer::sum))
+        Arrays.stream(arr).boxed().collect(Collectors.toMap(key -> key, value -> 1, Integer::sum))
 
                 .entrySet().stream()
-                .filter(i -> i.getValue() > 1)
+                .filter(set -> set.getValue() > 1)
                 .sorted(Map.Entry.comparingByKey())
                 .forEach(System.out::println);
 
