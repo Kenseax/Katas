@@ -1,6 +1,7 @@
 package com.example.demo.javacode;
 
 import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.stream.IntStream;
 
 /* Написать метод для возведения каждого числа в степень
@@ -10,6 +11,8 @@ import java.util.stream.IntStream;
 *  */
 
 public class SortedSquares {
+
+    LinkedList
 
     static int[] nums = {-4, -2, 1, 3};
 
