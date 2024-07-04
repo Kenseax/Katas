@@ -12,8 +12,6 @@ import java.util.stream.IntStream;
 
 public class SortedSquares {
 
-    LinkedList
-
     static int[] nums = {-4, -2, 1, 3};
 
     public static void main(String[] args) {

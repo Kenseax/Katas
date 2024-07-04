@@ -8,9 +8,11 @@ import java.util.Map;
  */
 
 public class CountWords {
+    final private int ON= 10;
     public static void main(String[] args) {
         String text = "1 2 3 4 5 34 21 23  1 2 3 5 6 7 1";
         System.out.println(countWords(text));
+
     }
 
     public static Map<String, Integer> countWords(String text) {

@@ -15,10 +15,10 @@ public class TwoIntefaces {
         }
     }
 
-    public class C implements A, B{}
+//    public class C implements A, B{}
 
     public static void main(String[] args) {
-        A a = new C();
-        a.print();
+//        A a = new C();
+//        a.print();
     }
 }
